@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.rohanshrestha.soundplayer.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_marginStart="84dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="42dp"
+            android:background="@drawable/play"
+            android:onClick="play"
+            tools:layout_editor_absoluteX="127dp"
+            tools:layout_editor_absoluteY="231dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="45dp"
+            android:background="@drawable/stop"
+            android:onClick="stop"
+            tools:layout_editor_absoluteX="212dp"
+            tools:layout_editor_absoluteY="230dp" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/volumeBar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="21dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/volume"
+        android:layout_alignTop="@+id/volumeBar"
+        android:layout_toStartOf="@+id/volumeBar" />
+
+    <SeekBar
+        android:id="@+id/scrubberBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/volumeBar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+</RelativeLayout>
+
